@@ -1,0 +1,221 @@
+openapi: 3.0.4
+info:
+  title: County Data Lookup
+  description: County Data is a simple tool for getting data about US counties. It returns information such as average income, area, and more based on the county name provided.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.9
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+- url: https://api.apiverve.com/
+paths:
+  /v1/countydata:
+    get:
+      summary: Get County Data
+      description: County Data is a simple tool for getting data about US counties. It returns information such as average income, area, and more based on the county name provided.
+      operationId: countydata
+      parameters:
+      - name: state
+        in: query
+        schema:
+          type: string
+        required: true
+        description: The two letter name of the US state the county is in (e.g., MO)
+        example: MO
+      - name: county
+        in: query
+        schema:
+          type: string
+        required: true
+        description: The name of the US county to get data about (e.g. Jackson)
+        example: Jackson
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: string
+                    description: data
+              example:
+                status: ok
+                error: 
+                data:
+                  name: jackson county
+                  state: MO
+                  age:
+                    0-4: 0.0644100874666257
+                    5-9: 0.0653275695543882
+                    10-14: 0.0659506039023571
+                    15-19: 0.0596761643843411
+                    20-24: 0.0597259502340646
+                    25-29: 0.0819247493993693
+                    30-34: 0.0752335311965247
+                    35-39: 0.0686802909200567
+                    40-44: 0.0583106096490667
+                    45-49: 0.0588056232406036
+                    50-54: 0.0585808756904231
+                    55-59: 0.0674783182624454
+                    60-64: 0.0620843770581115
+                    65-69: 0.0509977795511023
+                    70-74: 0.0389154650496223
+                    75-79: 0.0264377086560523
+                    80-84: 0.0174890577814572
+                    85+: 0.0199712380033883
+                  male: 339932
+                  female: 363079
+                  deaths:
+                    suicides: 106.714285714286
+                    homicides: 115.428571428571
+                    vehicle: 93
+                    firearmsuicides: 55.0952380952381
+                  health:
+                    poorhealth: 20.588989742
+                    physicallyunhealthydays: 4.247736361
+                    mentallyunhealthydays: 4.8111015035
+                    lowbirthweightpercent: 9.1518749808
+                    smokerspercent: 20.957241772
+                    obesitypercent: 31.5
+                    foodenvindex: 7.5
+                    physicallyinactivepercent: 23.2
+                    excessivedrinkingpercent: 18.940103365
+                    alcoholimpaireddrivingdeaths: 152
+                    teenbirthrate: 31.109351559
+                    uninsured: 12.486314662
+                    withannualmammogram: 45
+                    vaccinated: 51
+                    childreninpoverty: 19.6
+                    80thpercentileincome: 108296
+                    20thpercentileincome: 23275
+                    childreninsingleparenthouseholds: 33.224850811
+                    violentcrimerate: 941.43198334
+                    averagedailypm25: 9.1
+                    severehousingproblems: 15.347550638
+                    drivealonetowork: 83.470246386
+                    longcommutedrivesalone: 33.7
+                  longitude: -94.3474966550339
+                  latitude: 39.0167019181025
+                  education:
+                    lessthanhighschool: 9.4
+                    highschool: 28.3
+                    somecollege: 30.7
+                    bachelors: 31.6
+                  zipcodes:
+                  - '64137'
+                  - '64111'
+                  - '64053'
+                  - '64055'
+                  - '64064'
+                  - '64029'
+                  - '64106'
+                  - '64108'
+                  - '64034'
+                  - '64118'
+                  - '64136'
+                  - '64139'
+                  - '64125'
+                  - '64030'
+                  - '64014'
+                  - '64066'
+                  - '64080'
+                  - '64123'
+                  - '64131'
+                  - '64145'
+                  - '64128'
+                  - '64121'
+                  - '64170'
+                  - '64050'
+                  - '64057'
+                  - '64133'
+                  - '64109'
+                  - '64130'
+                  - '64134'
+                  - '64129'
+                  - '64158'
+                  - '64163'
+                  - '64070'
+                  - '64102'
+                  - '64105'
+                  - '64086'
+                  - '64101'
+                  - '64124'
+                  - '64157'
+                  - '64088'
+                  - '64061'
+                  - '64051'
+                  - '64002'
+                  - '64081'
+                  - '64013'
+                  - '64016'
+                  - '64112'
+                  - '64114'
+                  - '64110'
+                  - '64152'
+                  - '64127'
+                  - '64147'
+                  - '64120'
+                  - '64146'
+                  - '64199'
+                  - '64058'
+                  - '64054'
+                  - '64074'
+                  - '64119'
+                  - '64138'
+                  - '64149'
+                  - '64156'
+                  - '64132'
+                  - '64171'
+                  - '64148'
+                  - '64141'
+                  - '64999'
+                  - '64052'
+                  - '64015'
+                  - '64063'
+                  - '64075'
+                  - '64056'
+                  - '64082'
+                  - '64113'
+                  - '64155'
+                  - '64126'
+                  - '64197'
+                  - '64065'
+                  - '64198'
+                  lifeexpectancy: 77.19
+                  avgincome: 47054
+                  povertyrate: 13.7
+                  costofliving:
+                    livingwage: 14.55
+                    foodcosts: 3246
+                    medicalcosts: 2681
+                    housingcosts: 8136
+                    taxcosts: 6263
+                  landareakm2: 1565.601892
+                  areakm2: 1596.319707
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occured, try again later
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+- api_key: []
