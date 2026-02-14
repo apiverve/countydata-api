@@ -17,14 +17,11 @@ def call_countydata_api():
     Make a GET request to the County Data Lookup API
     """
     try:
-        # Query parameters
-        params &#x3D; {&#x27;state&#x27;: &#x27;MO&#x27;, &#x27;county&#x27;: &#x27;Jackson&#x27;}
-
         headers = {
             'x-api-key': API_KEY
         }
 
-        response = requests.get(API_URL, headers=headers, params=params)
+        response = requests.get(API_URL, headers=headers)
 
         # Raise exception for HTTP errors
         response.raise_for_status()
