@@ -13,13 +13,7 @@ const API_URL = 'https://api.apiverve.com/v1/countydata';
  */
 async function callCountyDataLookupAPI() {
   try {
-    // Query parameters
-    const params &#x3D; new URLSearchParams({
-            state: &#x27;MO&#x27;,
-            county: &#x27;Jackson&#x27;
-        });
-
-    const response = await fetch(`${API_URL}?${params}`, {
+    const response = await fetch(API_URL, {
       method: 'GET',
       headers: {
         'x-api-key': API_KEY
