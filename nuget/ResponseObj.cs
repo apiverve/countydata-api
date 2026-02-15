@@ -60,7 +60,6 @@ namespace APIVerve.API.CountyDataLookup
         public Education Education { get; set; }
 
         [JsonProperty("zipcodes")]
-        [JsonConverter(typeof(DecodeArrayConverter))]
         public long[] Zipcodes { get; set; }
 
         [JsonProperty("lifeexpectancy")]
