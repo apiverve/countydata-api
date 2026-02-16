@@ -44,7 +44,10 @@ from apiverve_countydatalookup.apiClient import CountydataAPIClient
 # Initialize the client with your APIVerve API key
 api = CountydataAPIClient("[YOUR_API_KEY]")
 
-query = { "state": "MO", "county": "Jackson" }
+query = {
+    "state": "MO",
+    "county": "Jackson"
+}
 
 try:
     # Make the API call
@@ -82,7 +85,10 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "state": "MO", "county": "Jackson" }
+query = {
+    "state": "MO",
+    "county": "Jackson"
+}
 ```
 
 ###### Simple Request
@@ -275,7 +281,10 @@ from apiverve_countydatalookup.apiClient import CountydataAPIClient, CountydataA
 
 api = CountydataAPIClient("[YOUR_API_KEY]")
 
-query = { "state": "MO", "county": "Jackson" }
+query = {
+    "state": "MO",
+    "county": "Jackson"
+}
 
 try:
     result = api.execute(query)
@@ -296,7 +305,10 @@ from apiverve_countydatalookup.apiClient import CountydataAPIClient, CountydataA
 
 api = CountydataAPIClient("[YOUR_API_KEY]")
 
-query = { "state": "MO", "county": "Jackson" }
+query = {
+    "state": "MO",
+    "county": "Jackson"
+}
 
 try:
     result = api.execute(query)
@@ -330,7 +342,10 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_countydatalookup.apiClient import CountydataAPIClient, CountydataAPIClientError
 
-query = { "state": "MO", "county": "Jackson" }
+query = {
+    "state": "MO",
+    "county": "Jackson"
+}
 
 # Using context manager ensures proper cleanup
 with CountydataAPIClient("[YOUR_API_KEY]") as api:
@@ -356,7 +371,10 @@ from apiverve_countydatalookup.apiClient import CountydataAPIClient
 # Enable debug mode
 api = CountydataAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "state": "MO", "county": "Jackson" }
+query = {
+    "state": "MO",
+    "county": "Jackson"
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -371,8 +389,12 @@ from apiverve_countydatalookup.apiClient import CountydataAPIClient
 
 api = CountydataAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "state": "MO",
+    "county": "Jackson"
+}
+
 try:
-    query = { "state": "MO", "county": "Jackson" }
     result = api.execute(query)
     print(result)
 finally:
