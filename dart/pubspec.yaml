@@ -1,0 +1,16 @@
+name: apiverve_countydata
+description: County Data is a simple tool for getting data about US counties. It returns information such as average income, area, and more based on the county name provided.
+version: 1.1.14
+homepage: https://apiverve.com/marketplace/countydata?utm_source=dart&utm_medium=homepage
+repository: https://github.com/apiverve/countydata-api/tree/main/dart
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  http: ^1.1.0
+  http_parser: ^4.0.0
+
+dev_dependencies:
+  lints: ^3.0.0
+  test: ^1.24.0
