@@ -4,54 +4,58 @@ declare module '@apiverve/countydata' {
     secure?: boolean;
   }
 
+  /**
+   * Describes fields the current plan does not unlock. Locked fields arrive as null
+   * in `data`; `locked_fields` names them, using dot paths for nested fields.
+   * Absent when the plan unlocks everything.
+   */
+  export interface PremiumInfo {
+    message: string;
+    upgrade_url: string;
+    locked_fields: string[];
+  }
+
   export interface countydataResponse {
     status: string;
     error: string | null;
     data: CountyDataLookupData;
     code?: number;
+    premium?: PremiumInfo;
   }
 
 
   interface CountyDataLookupData {
-      name:           string;
-      state:          string;
-      age:            { [key: string]: number };
-      male:           number;
-      female:         number;
-      deaths:         Deaths;
-      health:         { [key: string]: number };
-      longitude:      number;
-      latitude:       number;
+      name:           null | string;
+      state:          null | string;
+      age:            { [key: string]: number | null };
+      male:           number | null;
+      female:         number | null;
+      health:         { [key: string]: number | null };
+      longitude:      number | null;
+      latitude:       number | null;
       education:      Education;
-      zipcodes:       string[];
-      lifeexpectancy: number;
-      avgincome:      number;
-      povertyrate:    number;
+      zipcodes:       (null | string)[];
+      lifeexpectancy: number | null;
+      avgincome:      number | null;
+      povertyrate:    number | null;
       costofliving:   Costofliving;
-      landareakm2:    number;
-      areakm2:        number;
+      landareakm2:    number | null;
+      areakm2:        number | null;
   }
   
   interface Costofliving {
-      livingwage:   number;
-      foodcosts:    number;
-      medicalcosts: number;
-      housingcosts: number;
-      taxcosts:     number;
-  }
-  
-  interface Deaths {
-      suicides:        number;
-      homicides:       number;
-      vehicle:         number;
-      firearmsuicides: number;
+      livingwage:   number | null;
+      foodcosts:    number | null;
+      medicalcosts: number | null;
+      housingcosts: number | null;
+      taxcosts:     number | null;
   }
   
   interface Education {
-      lessthanhighschool: number;
-      highschool:         number;
-      somecollege:        number;
-      bachelors:          number;
+      lessthanhighschool: number | null;
+      highschool:         number | null;
+      somecollege:        number | null;
+      bachelors:          number | null;
   }
 
   export default class countydataWrapper {
