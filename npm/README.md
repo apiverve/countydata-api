@@ -149,12 +149,6 @@ async function makeRequest() {
     },
     "male": 339932,
     "female": 363079,
-    "deaths": {
-      "suicides": 106.71428571428571,
-      "homicides": 115.42857142857143,
-      "vehicle": 93,
-      "firearmsuicides": 55.095238095238095
-    },
     "health": {
       "poorhealth": 20.588989742,
       "physicallyunhealthydays": 4.247736361,
