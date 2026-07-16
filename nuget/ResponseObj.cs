@@ -25,6 +25,9 @@ namespace APIVerve.API.CountyDataLookup
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -36,96 +39,90 @@ namespace APIVerve.API.CountyDataLookup
         public string State { get; set; }
 
         [JsonProperty("age")]
-        public Dictionary<string, double> Age { get; set; }
+        public Dictionary<string, double?> Age { get; set; }
 
         [JsonProperty("male")]
-        public long Male { get; set; }
+        public long? Male { get; set; }
 
         [JsonProperty("female")]
-        public long Female { get; set; }
-
-        [JsonProperty("deaths")]
-        public Deaths Deaths { get; set; }
+        public long? Female { get; set; }
 
         [JsonProperty("health")]
-        public Dictionary<string, double> Health { get; set; }
+        public Dictionary<string, double?> Health { get; set; }
 
         [JsonProperty("longitude")]
-        public double Longitude { get; set; }
+        public double? Longitude { get; set; }
 
         [JsonProperty("latitude")]
-        public double Latitude { get; set; }
+        public double? Latitude { get; set; }
 
         [JsonProperty("education")]
         public Education Education { get; set; }
 
         [JsonProperty("zipcodes")]
-        public long[] Zipcodes { get; set; }
+        public long?[] Zipcodes { get; set; }
 
         [JsonProperty("lifeexpectancy")]
-        public double Lifeexpectancy { get; set; }
+        public double? Lifeexpectancy { get; set; }
 
         [JsonProperty("avgincome")]
-        public long Avgincome { get; set; }
+        public long? Avgincome { get; set; }
 
         [JsonProperty("povertyrate")]
-        public double Povertyrate { get; set; }
+        public double? Povertyrate { get; set; }
 
         [JsonProperty("costofliving")]
         public Costofliving Costofliving { get; set; }
 
         [JsonProperty("landareakm2")]
-        public double Landareakm2 { get; set; }
+        public double? Landareakm2 { get; set; }
 
         [JsonProperty("areakm2")]
-        public double Areakm2 { get; set; }
+        public double? Areakm2 { get; set; }
     }
 
     public partial class Costofliving
     {
         [JsonProperty("livingwage")]
-        public double Livingwage { get; set; }
+        public double? Livingwage { get; set; }
 
         [JsonProperty("foodcosts")]
-        public long Foodcosts { get; set; }
+        public long? Foodcosts { get; set; }
 
         [JsonProperty("medicalcosts")]
-        public long Medicalcosts { get; set; }
+        public long? Medicalcosts { get; set; }
 
         [JsonProperty("housingcosts")]
-        public long Housingcosts { get; set; }
+        public long? Housingcosts { get; set; }
 
         [JsonProperty("taxcosts")]
-        public long Taxcosts { get; set; }
-    }
-
-    public partial class Deaths
-    {
-        [JsonProperty("suicides")]
-        public double Suicides { get; set; }
-
-        [JsonProperty("homicides")]
-        public double Homicides { get; set; }
-
-        [JsonProperty("vehicle")]
-        public long Vehicle { get; set; }
-
-        [JsonProperty("firearmsuicides")]
-        public double Firearmsuicides { get; set; }
+        public long? Taxcosts { get; set; }
     }
 
     public partial class Education
     {
         [JsonProperty("lessthanhighschool")]
-        public double Lessthanhighschool { get; set; }
+        public double? Lessthanhighschool { get; set; }
 
         [JsonProperty("highschool")]
-        public double Highschool { get; set; }
+        public double? Highschool { get; set; }
 
         [JsonProperty("somecollege")]
-        public double Somecollege { get; set; }
+        public double? Somecollege { get; set; }
 
         [JsonProperty("bachelors")]
-        public double Bachelors { get; set; }
+        public double? Bachelors { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
