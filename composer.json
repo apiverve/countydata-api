@@ -1,0 +1,49 @@
+{
+    "name": "apiverve/countydata",
+    "description": "County Data is a simple tool for getting data about US counties. It returns information such as average income, area, and more based on the county name provided.",
+    "version": "1.2.0",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "APIVerve",
+            "email": "hello@apiverve.com",
+            "homepage": "https://apiverve.com"
+        }
+    ],
+    "keywords": [
+        "api",
+        "apiverve",
+        "countydata",
+        "county data",
+        "county data api",
+        "county data tool",
+        "county data software",
+        "county data service"
+    ],
+    "homepage": "https://apiverve.com/marketplace/countydata?utm_source=php&utm_medium=homepage",
+    "support": {
+        "email": "hello@apiverve.com",
+        "docs": "https://docs.apiverve.com/ref/countydata",
+        "source": "https://github.com/apiverve/countydata-API/tree/main/php"
+    },
+    "require": {
+        "php": ">=7.4",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "APIVerve\\Countydata\\": "php/src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "APIVerve\\Countydata\\Tests\\": "php/tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
