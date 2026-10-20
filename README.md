@@ -1,13 +1,13 @@
-# [County Data Lookup API](https://apiverve.com/marketplace/countydata?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [County Data Lookup API](https://apiverve.com/marketplace/countydata?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-County Data is a simple tool for getting data about US counties. It returns information such as average income, area, and more based on the county name provided.
+County Data Lookup is a county lookup API that retrieves income, poverty rate, and life expectancy for any US county by state and county name. Paid plans add age demographics, educational attainment, health indicators, ZIP codes, and cost of living.
 
 The County Data Lookup API provides a simple, reliable way to integrate county data lookup functionality into your applications. Built for developers who need production-ready county data lookup capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://apiverve.com/marketplace/countydata?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/countydata?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/countydata?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/countydata?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-GET-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -162,7 +162,7 @@ go get github.com/apiverve/countydata-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [County Data Lookup API](https://apiverve.com/marketplace/countydata?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [County Data Lookup API](https://apiverve.com/marketplace/countydata?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/countydata](https://docs.apiverve.com/ref/countydata)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -370,7 +370,7 @@ A real response from the County Data Lookup API:
 
 ## Support & Community
 
-- 🏠 **API Home**: [County Data Lookup API](https://apiverve.com/marketplace/countydata?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [County Data Lookup API](https://apiverve.com/marketplace/countydata?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)
