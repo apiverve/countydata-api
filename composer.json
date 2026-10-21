@@ -1,7 +1,7 @@
 {
     "name": "apiverve/countydata",
-    "description": "County Data is a simple tool for getting data about US counties. It returns information such as average income, area, and more based on the county name provided.",
-    "version": "1.2.0",
+    "description": "County Data Lookup is a county lookup API that retrieves income, poverty rate, and life expectancy for any US county by state and county name. Paid plans add age demographics, educational attainment, health indicators, ZIP codes, and cost of living.",
+    "version": "1.2.2",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -15,13 +15,13 @@
         "api",
         "apiverve",
         "countydata",
-        "county data",
         "county data api",
-        "county data tool",
-        "county data software",
-        "county data service"
+        "county lookup api",
+        "county information api",
+        "county facts api",
+        "county api"
     ],
-    "homepage": "https://apiverve.com/marketplace/countydata?utm_source=php&utm_medium=homepage",
+    "homepage": "https://apiverve.com/marketplace/countydata?utm_source=php&utm_medium=referral&utm_content=homepage",
     "support": {
         "email": "hello@apiverve.com",
         "docs": "https://docs.apiverve.com/ref/countydata",
