@@ -1,6 +1,6 @@
 # County Data Lookup API - PHP Package
 
-County Data is a simple tool for getting data about US counties. It returns information such as average income, area, and more based on the county name provided.
+County Data Lookup is a county lookup API that retrieves income, poverty rate, and life expectancy for any US county by state and county name. Paid plans add age demographics, educational attainment, health indicators, ZIP codes, and cost of living.
 
 ## Installation
 
@@ -233,11 +233,11 @@ $client = new Client(
 
 ## Documentation
 
-For more information, visit the [API Documentation](https://docs.apiverve.com/ref/countydata?utm_source=packagist&utm_medium=readme).
+For more information, visit the [API Documentation](https://docs.apiverve.com/ref/countydata?utm_source=packagist&utm_medium=referral&utm_content=readme).
 
 ## Support
 
-- Website: [https://apiverve.com/marketplace/countydata?utm_source=php&utm_medium=readme](https://apiverve.com/marketplace/countydata?utm_source=php&utm_medium=readme)
+- Website: [https://apiverve.com/marketplace/countydata?utm_source=php&utm_medium=referral&utm_content=readme](https://apiverve.com/marketplace/countydata?utm_source=php&utm_medium=referral&utm_content=readme)
 - Email: hello@apiverve.com
 
 ## License
