@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/countydata",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "County Data Lookup is a county lookup API that retrieves income, poverty rate, and life expectancy for any US county by state and county name. Paid plans add age demographics, educational attainment, health indicators, ZIP codes, and cost of living.",
   "main": "index.js",
   "types": "index.d.ts",
