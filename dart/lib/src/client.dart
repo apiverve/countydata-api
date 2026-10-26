@@ -46,7 +46,7 @@ final _formatPatterns = {
 
 /// County Data Lookup API client.
 ///
-/// For more information, visit: https://apiverve.com/marketplace/countydata?utm_source=dart&utm_medium=readme
+/// For more information, visit: https://apiverve.com/marketplace/countydata?utm_source=dart&utm_medium=referral&utm_content=readme
 ///
 /// Parameters:
 /// * [state] (required) - The two letter name of the US state the county is in (e.g., MO) [minLength: 2, maxLength: 2]

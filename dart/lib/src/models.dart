@@ -6,22 +6,50 @@ class CountydataResponse {
   final dynamic error;
   final CountydataData? data;
 
+  /// Set only when the current plan locks one or more fields; null otherwise.
+  final PremiumInfo? premium;
+
   CountydataResponse({
     required this.status,
     this.error,
     this.data,
+    this.premium,
   });
 
   factory CountydataResponse.fromJson(Map<String, dynamic> json) => CountydataResponse(
     status: json['status'] as String? ?? '',
     error: json['error'],
     data: json['data'] != null ? CountydataData.fromJson(json['data']) : null,
+    premium: json['premium'] != null ? PremiumInfo.fromJson(json['premium']) : null,
   );
 
   Map<String, dynamic> toJson() => {
     'status': status,
     if (error != null) 'error': error,
     if (data != null) 'data': data,
+    if (premium != null) 'premium': premium!.toJson(),
+  };
+}
+
+/// Describes fields the current plan does not unlock. Locked fields arrive as null
+/// in [data], and [lockedFields] names them (nested ones use dot paths).
+class PremiumInfo {
+  final String? message;
+  final String? upgradeUrl;
+  final List<String>? lockedFields;
+
+  PremiumInfo({this.message, this.upgradeUrl, this.lockedFields});
+
+  factory PremiumInfo.fromJson(Map<String, dynamic> json) => PremiumInfo(
+    message: json['message'] as String?,
+    upgradeUrl: json['upgrade_url'] as String?,
+    lockedFields: (json['locked_fields'] as List?)?.map((e) => e.toString()).toList(),
+  );
+
+  Map<String, dynamic> toJson() => {
+    if (message != null) 'message': message,
+    if (upgradeUrl != null) 'upgrade_url': upgradeUrl,
+    if (lockedFields != null) 'locked_fields': lockedFields,
   };
 }
 
@@ -31,20 +59,19 @@ class CountydataData {
   String? name;
   String? state;
   CountydataDataAge? age;
-  int? male;
-  int? female;
-  CountydataDataDeaths? deaths;
+  num? male;
+  num? female;
   CountydataDataHealth? health;
-  double? longitude;
-  double? latitude;
+  num? longitude;
+  num? latitude;
   CountydataDataEducation? education;
   List<String>? zipcodes;
-  double? lifeexpectancy;
-  int? avgincome;
-  double? povertyrate;
+  num? lifeexpectancy;
+  num? avgincome;
+  num? povertyrate;
   CountydataDataCostofliving? costofliving;
-  double? landareakm2;
-  double? areakm2;
+  num? landareakm2;
+  num? areakm2;
 
   CountydataData({
     this.name,
@@ -52,7 +79,6 @@ class CountydataData {
     this.age,
     this.male,
     this.female,
-    this.deaths,
     this.health,
     this.longitude,
     this.latitude,
@@ -72,7 +98,6 @@ class CountydataData {
       age: json['age'] != null ? CountydataDataAge.fromJson(json['age']) : null,
       male: json['male'],
       female: json['female'],
-      deaths: json['deaths'] != null ? CountydataDataDeaths.fromJson(json['deaths']) : null,
       health: json['health'] != null ? CountydataDataHealth.fromJson(json['health']) : null,
       longitude: json['longitude'],
       latitude: json['latitude'],
@@ -88,24 +113,24 @@ class CountydataData {
 }
 
 class CountydataDataAge {
-  double? 0-4;
-  double? 5-9;
-  double? 10-14;
-  double? 15-19;
-  double? 20-24;
-  double? 25-29;
-  double? 30-34;
-  double? 35-39;
-  double? 40-44;
-  double? 45-49;
-  double? 50-54;
-  double? 55-59;
-  double? 60-64;
-  double? 65-69;
-  double? 70-74;
-  double? 75-79;
-  double? 80-84;
-  double? 85+;
+  num? 0-4;
+  num? 5-9;
+  num? 10-14;
+  num? 15-19;
+  num? 20-24;
+  num? 25-29;
+  num? 30-34;
+  num? 35-39;
+  num? 40-44;
+  num? 45-49;
+  num? 50-54;
+  num? 55-59;
+  num? 60-64;
+  num? 65-69;
+  num? 70-74;
+  num? 75-79;
+  num? 80-84;
+  num? 85+;
 
   CountydataDataAge({
     this.0-4,
@@ -150,51 +175,30 @@ class CountydataDataAge {
     );
 }
 
-class CountydataDataDeaths {
-  double? suicides;
-  double? homicides;
-  int? vehicle;
-  double? firearmsuicides;
-
-  CountydataDataDeaths({
-    this.suicides,
-    this.homicides,
-    this.vehicle,
-    this.firearmsuicides,
-  });
-
-  factory CountydataDataDeaths.fromJson(Map<String, dynamic> json) => CountydataDataDeaths(
-      suicides: json['suicides'],
-      homicides: json['homicides'],
-      vehicle: json['vehicle'],
-      firearmsuicides: json['firearmsuicides'],
-    );
-}
-
 class CountydataDataHealth {
-  double? poorhealth;
-  double? physicallyunhealthydays;
-  double? mentallyunhealthydays;
-  double? lowbirthweightpercent;
-  double? smokerspercent;
-  double? obesitypercent;
-  double? foodenvindex;
-  double? physicallyinactivepercent;
-  double? excessivedrinkingpercent;
-  int? alcoholimpaireddrivingdeaths;
-  double? teenbirthrate;
-  double? uninsured;
-  int? withannualmammogram;
-  int? vaccinated;
-  double? childreninpoverty;
-  int? 80thpercentileincome;
-  int? 20thpercentileincome;
-  double? childreninsingleparenthouseholds;
-  double? violentcrimerate;
-  double? averagedailypm25;
-  double? severehousingproblems;
-  double? drivealonetowork;
-  double? longcommutedrivesalone;
+  num? poorhealth;
+  num? physicallyunhealthydays;
+  num? mentallyunhealthydays;
+  num? lowbirthweightpercent;
+  num? smokerspercent;
+  num? obesitypercent;
+  num? foodenvindex;
+  num? physicallyinactivepercent;
+  num? excessivedrinkingpercent;
+  num? alcoholimpaireddrivingdeaths;
+  num? teenbirthrate;
+  num? uninsured;
+  num? withannualmammogram;
+  num? vaccinated;
+  num? childreninpoverty;
+  num? 80thpercentileincome;
+  num? 20thpercentileincome;
+  num? childreninsingleparenthouseholds;
+  num? violentcrimerate;
+  num? averagedailypm25;
+  num? severehousingproblems;
+  num? drivealonetowork;
+  num? longcommutedrivesalone;
 
   CountydataDataHealth({
     this.poorhealth,
@@ -250,10 +254,10 @@ class CountydataDataHealth {
 }
 
 class CountydataDataEducation {
-  double? lessthanhighschool;
-  double? highschool;
-  double? somecollege;
-  double? bachelors;
+  num? lessthanhighschool;
+  num? highschool;
+  num? somecollege;
+  num? bachelors;
 
   CountydataDataEducation({
     this.lessthanhighschool,
@@ -271,11 +275,11 @@ class CountydataDataEducation {
 }
 
 class CountydataDataCostofliving {
-  double? livingwage;
-  int? foodcosts;
-  int? medicalcosts;
-  int? housingcosts;
-  int? taxcosts;
+  num? livingwage;
+  num? foodcosts;
+  num? medicalcosts;
+  num? housingcosts;
+  num? taxcosts;
 
   CountydataDataCostofliving({
     this.livingwage,

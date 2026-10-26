@@ -1,11 +1,11 @@
 # County Data Lookup API - Dart/Flutter Client
 
-County Data is a simple tool for getting data about US counties. It returns information such as average income, area, and more based on the county name provided.
+County Data Lookup is a county lookup API that retrieves income, poverty rate, and life expectancy for any US county by state and county name. Paid plans add age demographics, educational attainment, health indicators, ZIP codes, and cost of living.
 
 [![pub package](https://img.shields.io/pub/v/apiverve_countydata.svg)](https://pub.dev/packages/apiverve_countydata)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This is the Dart/Flutter client for the [County Data Lookup API](https://apiverve.com/marketplace/countydata?utm_source=dart&utm_medium=readme).
+This is the Dart/Flutter client for the [County Data Lookup API](https://apiverve.com/marketplace/countydata?utm_source=dart&utm_medium=referral&utm_content=readme).
 
 ## Installation
 
@@ -13,7 +13,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  apiverve_countydata: ^1.1.14
+  apiverve_countydata: ^1.2.3
 ```
 
 Then run:
@@ -77,12 +77,6 @@ void main() async {
     },
     "male": 339932,
     "female": 363079,
-    "deaths": {
-      "suicides": 106.71428571428571,
-      "homicides": 115.42857142857143,
-      "vehicle": 93,
-      "firearmsuicides": 55.095238095238095
-    },
     "health": {
       "poorhealth": 20.588989742,
       "physicallyunhealthydays": 4.247736361,
@@ -215,12 +209,12 @@ void main() async {
 
 ## API Reference
 
-- **API Home:** [County Data Lookup API](https://apiverve.com/marketplace/countydata?utm_source=dart&utm_medium=readme)
-- **Documentation:** [docs.apiverve.com/ref/countydata](https://docs.apiverve.com/ref/countydata?utm_source=dart&utm_medium=readme)
+- **API Home:** [County Data Lookup API](https://apiverve.com/marketplace/countydata?utm_source=dart&utm_medium=referral&utm_content=readme)
+- **Documentation:** [docs.apiverve.com/ref/countydata](https://docs.apiverve.com/ref/countydata?utm_source=dart&utm_medium=referral&utm_content=readme)
 
 ## Authentication
 
-All requests require an API key. Get yours at [apiverve.com](https://apiverve.com?utm_source=dart&utm_medium=readme).
+All requests require an API key. Get yours at [apiverve.com](https://apiverve.com?utm_source=dart&utm_medium=referral&utm_content=readme).
 
 ## License
 
@@ -228,4 +222,4 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
-Built with Dart for [APIVerve](https://apiverve.com?utm_source=dart&utm_medium=readme)
+Built with Dart for [APIVerve](https://apiverve.com?utm_source=dart&utm_medium=referral&utm_content=readme)
