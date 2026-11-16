@@ -72,6 +72,9 @@ class CountydataData {
   CountydataDataCostofliving? costofliving;
   num? landareakm2;
   num? areakm2;
+  String? countyFips;
+  String? stateFips;
+  String? timezone;
 
   CountydataData({
     this.name,
@@ -90,6 +93,9 @@ class CountydataData {
     this.costofliving,
     this.landareakm2,
     this.areakm2,
+    this.countyFips,
+    this.stateFips,
+    this.timezone,
   });
 
   factory CountydataData.fromJson(Map<String, dynamic> json) => CountydataData(
@@ -109,6 +115,9 @@ class CountydataData {
       costofliving: json['costofliving'] != null ? CountydataDataCostofliving.fromJson(json['costofliving']) : null,
       landareakm2: json['landareakm2'],
       areakm2: json['areakm2'],
+      countyFips: json['countyFips'],
+      stateFips: json['stateFips'],
+      timezone: json['timezone'],
     );
 }
 
