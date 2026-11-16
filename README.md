@@ -1,6 +1,6 @@
 # [County Data Lookup API](https://apiverve.com/marketplace/countydata?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-County Data Lookup is a county lookup API that retrieves income, poverty rate, and life expectancy for any US county by state and county name. Paid plans add age demographics, educational attainment, health indicators, ZIP codes, and cost of living.
+County Data Lookup is a county lookup API that retrieves income, poverty rate, and life expectancy for any US county by state and county name, along with its FIPS code and time zone. Paid plans add age demographics, educational attainment, health indicators, ZIP codes, and cost of living.
 
 The County Data Lookup API provides a simple, reliable way to integrate county data lookup functionality into your applications. Built for developers who need production-ready county data lookup capabilities without the complexity of building from scratch.
 
@@ -361,7 +361,10 @@ A real response from the County Data Lookup API:
       "taxcosts": 6263
     },
     "landareakm2": 1565.601892,
-    "areakm2": 1596.319707
+    "areakm2": 1596.319707,
+    "countyFips": "29095",
+    "stateFips": "29",
+    "timezone": "America/Chicago"
   }
 }
 ```
