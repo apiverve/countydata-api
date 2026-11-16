@@ -79,6 +79,15 @@ namespace APIVerve.API.CountyDataLookup
 
         [JsonProperty("areakm2")]
         public double? Areakm2 { get; set; }
+
+        [JsonProperty("countyFips")]
+        public long? CountyFips { get; set; }
+
+        [JsonProperty("stateFips")]
+        public long? StateFips { get; set; }
+
+        [JsonProperty("timezone")]
+        public string Timezone { get; set; }
     }
 
     public partial class Costofliving
