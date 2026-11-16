@@ -41,6 +41,9 @@ declare module '@apiverve/countydata' {
       costofliving:   Costofliving;
       landareakm2:    number | null;
       areakm2:        number | null;
+      countyFIPS:     null | string;
+      stateFIPS:      null | string;
+      timezone:       null | string;
   }
   
   interface Costofliving {
