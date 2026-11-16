@@ -2,14 +2,14 @@ from setuptools import setup, find_packages
 
 setup(
     name='apiverve_countydatalookup',
-    version='1.2.5',
+    version='1.2.6',
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
         'requests',
         'setuptools'
     ],
-    description='County Data Lookup is a county lookup API that retrieves income, poverty rate, and life expectancy for any US county by state and county name. Paid plans add age demographics, educational attainment, health indicators, ZIP codes, and cost of living.',
+    description='County Data Lookup is a county lookup API that retrieves income, poverty rate, and life expectancy for any US county by state and county name, along with its FIPS code and time zone. Paid plans add age demographics, educational attainment, health indicators, ZIP codes, and cost of living.',
     author='APIVerve',
     author_email='hello@apiverve.com',
     url='https://apiverve.com/marketplace/countydata?utm_source=pypi&utm_medium=referral&utm_content=homepage',
