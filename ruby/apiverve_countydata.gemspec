@@ -2,12 +2,12 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "apiverve_countydata"
-  spec.version       = "1.2.5"
+  spec.version       = "1.2.6"
   spec.authors       = ["APIVerve"]
   spec.email         = ["hello@apiverve.com"]
 
   spec.summary       = "County Data Lookup API - Ruby Client"
-  spec.description   = "County Data Lookup is a county lookup API that retrieves income, poverty rate, and life expectancy for any US county by state and county name. Paid plans add age demographics, educational attainment, health indicators, ZIP codes, and cost of living."
+  spec.description   = "County Data Lookup is a county lookup API that retrieves income, poverty rate, and life expectancy for any US county by state and county name, along with its FIPS code and time zone. Paid plans add age demographics, educational attainment, health indicators, ZIP codes, and cost of living."
   spec.homepage      = "https://apiverve.com/marketplace/countydata?utm_source=ruby&utm_medium=referral&utm_content=homepage"
   spec.license       = "MIT"
   spec.required_ruby_version = ">= 2.7.0"
